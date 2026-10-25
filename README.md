@@ -56,7 +56,8 @@ pnpm add -g astral             # pnpm
 yarn global add astral         # yarn
 ```
 
-> Node.js ≥ 18 即可。**运行时零依赖**——安装很快，也不会有供应链风险。
+> Node.js ≥ 22 即可（用到 ESM 顶层 await 与较新的 `node --test` 行为）。
+> **运行时零依赖**——安装很快，也不会有供应链风险。
 
 ### 第一个房间
 
