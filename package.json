@@ -1,0 +1,68 @@
+{
+  "name": "astral",
+  "version": "0.1.0",
+  "description": "ASTRAL - 终端星河：ASCII 行星渲染的跨平台 P2P 加密通信与游戏终端。局域网 WiFi / 手机热点 / 蓝牙，千人房间、群聊、私聊、文件传输、投票、狼人杀、三国杀、大富翁。",
+  "license": "MIT",
+  "author": "ASTRAL contributors",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "bin": {
+    "astral": "./dist/cli/main.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./lib/*": "./dist/lib/*.js",
+    "./net": "./dist/net/index.js",
+    "./crypto": "./dist/crypto/index.js",
+    "./games": "./dist/games/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "cli",
+    "terminal",
+    "ascii-art",
+    "ansi",
+    "p2p",
+    "lan",
+    "bluetooth",
+    "e2ee",
+    "chat",
+    "werewolf",
+    "sanguosha",
+    "monopoly",
+    "tui"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "dev": "tsc -p tsconfig.json --watch",
+    "start": "node ./dist/cli/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/*.test.js\"",
+    "smoke": "node ./scripts/e2e.mjs",
+    "sim": "node ./scripts/game-sim.mjs",
+    "e2e": "node ./scripts/full-e2e.mjs",
+    "astral": "node ./dist/cli/main.js"
+  },
+  "optionalDependencies": {
+    "@abandonware/noble": "^1.9.2-9",
+    "bluetooth-serial-port": "^2.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  }
+}

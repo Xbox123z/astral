@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.tsbuildinfo
+npm-cache/
+.env
+.env.*
+*.log
+.astral/
+.astral.json
+coverage/
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
